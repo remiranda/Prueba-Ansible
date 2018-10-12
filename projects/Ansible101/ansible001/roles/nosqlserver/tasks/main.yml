@@ -1,2 +1,10 @@
 ---
 # tasks file for nosqlserver
+-name:Instalacion de Redis
+  apt: pkg={{item}} state=lastest
+  with_item :
+  -redis_server
+  sudo:true
+  
+ name: start redis
+ -service:name 
