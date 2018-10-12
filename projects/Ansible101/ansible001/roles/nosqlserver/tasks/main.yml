@@ -7,4 +7,12 @@
   sudo:true
   
  name: start redis
- -service:name 
+ -service:name{{item}} state=started enabled=yes
+ with_item :
+ -redis_server
+ become:yes
+ 
+ name: Configuracion
+ -template: src=redis.js dest=/etc/redis/redis.conf owner=root goup=root mode=000
+ become:yes
+ notify:Redis Restart
