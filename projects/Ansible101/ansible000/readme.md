@@ -36,3 +36,4 @@ Realiza una prueba de conexión a las maquinas que se crearon recientemente, por
     ssh root@server03 -p 2223 -i ../key.private
 
 Si la conexión se establece, ya está listo el banco de pruebas y puedes ingresar a ansible001.
+Version vYM8G2*NBR&7H%onI%s93&4$
